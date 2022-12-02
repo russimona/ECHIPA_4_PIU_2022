@@ -6,6 +6,7 @@ import AddRoute from "./pages/admin/add-route/AddRoute";
 import AddUser from "./pages/admin/create-user/AddUser";
 import HomeAdmin from "./pages/admin/home/home";
 import PlanMenu from "./pages/admin/plan-menu/plan-menu";
+import HomeVolunteer from "./pages/volunteer/home/home"
 
 import Login from "./pages/login";
 
@@ -19,6 +20,7 @@ export default function App() {
           <Route exact path="/admin-create-user" element={<AddUser />} />
           <Route exact path="/admin-add-route" element={<AddRoute />} />
           <Route exact path="/admin-plan-daily-menu" element={<PlanMenu />} />
+          <Route exact path="/volunteer-home-page" element={<HomeVolunteer />} />
         </Routes>
       </div>
     </Router>
