@@ -1,10 +1,14 @@
 import React from "react";
-
-//
 import "./adduser.css";
+
+import {
+  TableRowVisionDeficit,
+  TableRowVolunteer,
+} from "./components/tableRow";
 //components
 import NavbarAdmin from "../navbar";
 
+import deleteIcon from "../../../assets/delete.png"
 const AddUser = () => {
   return (
     <>
@@ -31,27 +35,16 @@ const AddUser = () => {
               +
             </span>
           </h4>
-
-          <div
-            style={{
-              backgroundColor: "#3D3D5C",
-              borderRadius: "10px",
-              padding: "5px",
-              margin: "10px",
-              color: "white",
-            }}
-          >
-            <label style={{ float: "left", marginLeft: "10px" }}>
-              Full Name
-            </label>
-            <label style={{ marginLeft: "10%" }}>Address</label>
-            <label style={{ marginLeft: "13%" }}>Phone Number</label>
-            <label style={{ marginLeft: "13%" }}>Delete</label>
-          </div>
+          <TableRowVisionDeficit />
+          <TableRowVisionDeficit name={'Name1 Surname1'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
+          <TableRowVisionDeficit name={'Name3 Surname3'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
+          <TableRowVisionDeficit name={'Name4 Surname4'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
+          <TableRowVisionDeficit name={'Name5 Surname5'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
+        
         </div>
         <div className="child-right-add-user">
           <h4 className="title-add-user">
-            Volunteer{" "}
+            Volunteer
             <span
               style={{
                 marginLeft: "30px",
@@ -64,21 +57,12 @@ const AddUser = () => {
               +
             </span>
           </h4>
-          <div
-            style={{
-              backgroundColor: "#3D3D5C",
-              borderRadius: "10px",
-              padding: "5px",
-              margin: "10px",
-              color: "white",
-            }}
-          >
-            <label style={{ float: "left", marginLeft: "10px" }}>
-              Full Name
-            </label>
-            <label style={{ marginLeft: "20%" }}>Phone Number</label>
-            <label style={{ marginLeft: "25%" }}>Delete</label>
-          </div>
+          <TableRowVolunteer />
+          <TableRowVolunteer name={'Name1 Surname1'} phone_number={'0764000000'} icon={deleteIcon} />
+          <TableRowVolunteer name={'Name2 Surname2'} phone_number={'0764000000'} icon={deleteIcon} />
+          <TableRowVolunteer name={'Name3 Surname3'} phone_number={'0764000000'} icon={deleteIcon} />
+
+          
         </div>
       </div>
     </>
