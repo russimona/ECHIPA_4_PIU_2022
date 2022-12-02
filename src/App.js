@@ -15,10 +15,10 @@ export default function App() {
       <div>
         <Routes>
           <Route exact path="/" element={<Login />} />
-          <Route exact path='/admin-home-page' element={<HomeAdmin/>} />
-          <Route exact path='/admin-create-user' element={<AddUser/>} />
-          <Route exact path='/admin-add-route' element={<AddRoute/>} />
-          <Route exact path='/admin-plan-daily-menu' element={<PlanMenu/>} />
+          <Route exact path="/admin-home-page" element={<HomeAdmin />} />
+          <Route exact path="/admin-create-user" element={<AddUser />} />
+          <Route exact path="/admin-add-route" element={<AddRoute />} />
+          <Route exact path="/admin-plan-daily-menu" element={<PlanMenu />} />
         </Routes>
       </div>
     </Router>
