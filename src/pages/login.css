@@ -14,11 +14,11 @@
     vertical-align: middle;
 }
 
-label {
+.label {
     margin-left: 5vw;
 } 
 
-input {
+.input {
     margin-top: 10px !important;
     width: 30vw;
     display: flex;
@@ -31,7 +31,7 @@ input {
     background-color: white;
 }
 
-button {
+.button {
     width: 31vw;
     display: flex;
     margin: auto;
@@ -45,13 +45,13 @@ button {
     justify-content: center;
 }
 
-img {
+.img {
     height: 35vw;
     width: 35vw;
     margin-left: 12.5vw;
 }
 
-h1 {
+.logo {
     font-size :60px;
     margin: auto;
     display: flex;

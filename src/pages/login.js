@@ -13,21 +13,21 @@ const Login = () => {
         <h2 style = {{justifyContent: 'center', display: 'flex', paddingTop: '30PX', marginBottom: '80px'}}>
           Login to Your Account
         </h2>
-        <label>
+        <label className="label">
           Email
         </label>
-        <input placeholder="email"/>
-        <label>
+        <input placeholder="email" className="input"/>
+        <label className="label">
           Password
         </label>
-        <input placeholder="password" type="password"/>
-        <Button>
+        <input placeholder="password" type="password" className="input"/>
+        <Button className="button">
           LOGIN
         </Button>
       </div>
 
       <div className="child-right">
-        <img src={eye}/>
+        <img src={eye} alt="logo" className="img"/>
         <h1>
           Eyes for everyone 
         </h1>
