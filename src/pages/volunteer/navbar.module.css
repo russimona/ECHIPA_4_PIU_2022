@@ -1,0 +1,70 @@
+.topBar {
+  background-color: #666699;
+  height: auto;
+  display: flex;
+}
+
+.topBar .icon {
+  padding: 15px;
+  color: white;
+  size: 27px;
+}
+
+.topBar .appTitle {
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  font: bold;
+}
+
+.topBar .imgContainer {
+  padding-left: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.imgContainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.navBar {
+  height: 100vh;
+  background-color: #666699;
+  display: block;
+  color: white;
+}
+
+.navBar .navLink {
+  display: flex;
+  justify-content: left;
+  padding: 20px;
+  color: white;
+  text-decoration: none;
+}
+
+.menuItem {
+  padding-left: 13px;
+}
+
+.navBar .signOut {
+  margin-top: 280px;
+  padding: 20px;
+  display: flex;
+  justify-content: left;
+}
+
+.navBar .signOut .icon {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+hr.underline {
+  display: block;
+  width: 320px;
+  margin: 0;
+  margin-left: 20px;
+  border: 1px solid #a3a3c2;
+}

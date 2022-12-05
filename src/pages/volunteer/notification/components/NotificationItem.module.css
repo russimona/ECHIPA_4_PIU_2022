@@ -1,0 +1,51 @@
+.notificationContainer {
+  margin-top: 10px;
+  background-color: white;
+  color: #3d3d5c;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.notificationContainer .left {
+  display: block;
+  margin: 10px;
+  flex: 0 0 48%;
+  padding: 10px;
+}
+
+.notificationContainer .right {
+  width: 120px;
+  display: inline;
+  margin: 10px;
+  margin-left: 0px;
+  padding: 10px;
+  padding-left: 0;
+}
+
+.notificationContainer .right .myButton {
+  width: 120px;
+  color: white;
+  background-color: #3d3d5c;
+  border: none;
+  margin-bottom: 10px;
+  height: 30px;
+  font-style: bold;
+}
+
+.iconOn {
+  color: #976dd0;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+
+.notificationContainer .left .group {
+  display: inline-flex;
+  font-size: 17px;
+}
+
+.notificationContainer .left .urgency {
+  margin-top: 17px;
+  font-size: 13px;
+  font: bold;
+}
