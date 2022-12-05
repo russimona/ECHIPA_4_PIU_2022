@@ -1,0 +1,88 @@
+.content {
+     background-color:black;
+     height:100vh;
+     width:100vw;
+}
+.title-section{
+   background-color:black;
+   padding-left:40vw;
+}
+
+.menu-section {
+    height: 100%;
+    width: 100%;
+    padding-left:2.20%;
+    padding-right:2.20%;
+}
+
+.title{
+    margin-top:0px;
+    margin-bottom:0px;
+    color:white;
+    font-weight:bold;
+    font-size:2vw;
+}
+
+.buttons-group{
+    height:22%;
+    margin-bottom:15px;
+}
+
+.b1 {
+    background-color: #F3911E
+}
+
+.b2 {
+    background-color: #FFEE00
+}
+
+.b3 {
+    background-color: #E8E1D8
+}
+
+.b4 {
+    background-color: #921A82
+}
+
+.b5 {
+    background-color: #8545BC
+}
+
+.b6 {
+    background-color: #240ADD
+}
+
+.b7 {
+    background-color: #006763
+}
+
+.b8 {
+    background-color: #00CCC5
+}
+
+.b9 {
+    background-color: #45AC20
+}
+
+.b0 {
+    background-color: #FFFFFF
+}
+
+.bres {
+    background-color: #FFB6C1
+}
+
+.bem {
+    background-color: #D00000
+}
+
+
+.button {
+    height: 100%;
+    width: 30%;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    margin-right: 2.25%;
+    font-size: 300%;
+}
+
