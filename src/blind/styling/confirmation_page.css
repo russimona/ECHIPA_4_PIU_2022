@@ -1,0 +1,33 @@
+.content-confirm{
+    height:100vh;
+    width:100vw;
+    padding-left:2vw;
+    padding-right:1vw;
+    background-color:black;
+}
+.button-confirm{
+    margin-top:2vh;
+    height:42vh;
+    width:88vw;
+    margin-left:4%;
+    font-size:1000%;
+    font-weight:bold;
+}
+.title-section-conf {
+    background-color: black;
+    padding-left: 16vw;
+}
+
+.title-confirm {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 5vh;
+}
+.x {
+    background-color: #D00000
+}
+.v {
+    background-color: #006763
+}

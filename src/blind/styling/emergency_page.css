@@ -1,0 +1,35 @@
+.content-emergency{
+    height:100vh;
+    width:100vw;
+    padding-top:2vh;
+    padding-bottom:2vh;
+    padding-right:4vw;
+}
+
+.title-section-emergency {
+    padding-left: 35vw;
+}
+
+.title-emergency {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 5vw;
+}
+
+.emergency-input-presenter {
+    margin-left:8vw;
+    margin-right:2vw;
+    height: 85vh;
+    width: 85vw;
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,25,0,1) 100%, rgba(226,0,0,1) 100%);
+}
+
+.high-emergency{
+    margin-top:77vh;
+    margin-left:2%;
+}
+
+.low-emergency {
+    margin-left: 2%;
+}
