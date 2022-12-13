@@ -1,0 +1,24 @@
+.profileContainer {
+  margin-top: 10px;
+  background-color: white;
+  color: #3d3d5c;
+  width: 100%;
+}
+
+.closeSection {
+  padding: 10px;
+  padding-left: 265px;
+  display: inline-flex;
+  font-size: 17px;
+}
+
+.profileContainer .fieldsContainer {
+  display: block;
+  flex: 0 0 48%;
+  padding: 10px;
+}
+
+.profileContainer .fieldsContainer .field {
+  padding-bottom: 10px;
+  padding-left: 40px;
+}
