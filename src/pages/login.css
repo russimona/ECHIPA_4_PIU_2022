@@ -1,6 +1,6 @@
 .child-left {
     height: 100vh;;
-    width:40vw;
+    width:40%;
     background-color :#E0E0EB;
     display: inline-block;
     vertical-align: middle;
@@ -8,7 +8,7 @@
 
 .child-right {
     height: 100vh;
-    width:60vw;
+    width:60%;
     background-color : #A3A3C2;
     display: inline-block;
     vertical-align: middle;
@@ -31,7 +31,7 @@
     background-color: white;
 }
 
-.button {
+.button-login {
     width: 31vw;
     display: flex;
     margin: auto;

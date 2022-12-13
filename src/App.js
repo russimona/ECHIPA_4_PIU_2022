@@ -26,7 +26,7 @@ export default function App() {
           <Route exact path="/admin-create-user" element={<AddUser />} />
           <Route exact path="/admin-add-route" element={<AddRoute />} />
           <Route exact path="/admin-plan-daily-menu" element={<PlanMenu />} />
-          <Route exact path="/" element={<Login />} />
+          {/* <Route exact path="/" element={<Login />} /> */}
           <Route exact path="/blindMenu" element={<MainMenu />} />
           <Route exact path="/camera" element={<CameraPage />} />
           <Route exact path="/confirm" element={<ConfirmationPage />} />

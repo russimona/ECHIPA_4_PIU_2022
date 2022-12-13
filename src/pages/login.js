@@ -14,7 +14,7 @@ const Login = () => {
           style={{
             justifyContent: "center",
             display: "flex",
-            paddingTop: "30PX",
+            paddingTop: "30",
             marginBottom: "80px",
           }}
         >
@@ -24,7 +24,7 @@ const Login = () => {
         <input placeholder="email" className="input" />
         <label className="label">Password</label>
         <input placeholder="password" type="password" className="input" />
-        <Button className="button">LOGIN</Button>
+        <Button className="button-login">LOGIN</Button>
       </div>
 
       <div className="child-right">
