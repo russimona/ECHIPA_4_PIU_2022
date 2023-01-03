@@ -7,9 +7,9 @@ import {
 } from "./components/tableRow";
 //components
 import NavbarAdmin from "../navbar";
-
-import deleteIcon from "../../../assets/delete.png"
-const AddUser = () => {
+import deleteIcon from "../../../assets/delete.png";
+import { Router } from "react-router-dom";
+const AddUser = ({ blindUsers, volunteers }) => {
   return (
     <>
       <NavbarAdmin />
@@ -31,16 +31,23 @@ const AddUser = () => {
                 fontSize: "25px",
                 marginTop: "-7px",
               }}
+              onClick={() => (window.location.href = "/add-blind-person")}
             >
               +
             </span>
           </h4>
           <TableRowVisionDeficit />
-          <TableRowVisionDeficit name={'Name1 Surname1'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
-          <TableRowVisionDeficit name={'Name3 Surname3'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
-          <TableRowVisionDeficit name={'Name4 Surname4'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
-          <TableRowVisionDeficit name={'Name5 Surname5'} address={'500410'} phone_number={'0764000000'} icon={deleteIcon}/>
-        
+          {blindUsers.map((user) => {
+            return (
+              <TableRowVisionDeficit
+                name={user.name}
+                email={user.email}
+                address={user.postalCode}
+                phone_number={user.phone}
+                icon={deleteIcon}
+              />
+            );
+          })}
         </div>
         <div className="child-right-add-user">
           <h4 className="title-add-user">
@@ -53,16 +60,22 @@ const AddUser = () => {
                 fontSize: "25px",
                 marginTop: "-7px",
               }}
+              onClick={() => (window.location.href = "/add-volunteer")}
             >
               +
             </span>
           </h4>
           <TableRowVolunteer />
-          <TableRowVolunteer name={'Name1 Surname1'} phone_number={'0764000000'} icon={deleteIcon} />
-          <TableRowVolunteer name={'Name2 Surname2'} phone_number={'0764000000'} icon={deleteIcon} />
-          <TableRowVolunteer name={'Name3 Surname3'} phone_number={'0764000000'} icon={deleteIcon} />
-
-          
+          {volunteers.map((user) => {
+            return (
+              <TableRowVolunteer
+                email={user.email}
+                name={user.name}
+                phone_number={user.phone}
+                icon={deleteIcon}
+              />
+            );
+          })}
         </div>
       </div>
     </>

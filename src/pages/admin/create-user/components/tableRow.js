@@ -1,6 +1,12 @@
 import React from "react";
 
-const TableRowVisionDeficit = ({ name, address, phone_number, icon }) => {
+const TableRowVisionDeficit = ({
+  name,
+  address,
+  phone_number,
+  icon,
+  email,
+}) => {
   return (
     <div
       style={{
@@ -11,25 +17,45 @@ const TableRowVisionDeficit = ({ name, address, phone_number, icon }) => {
         color: "white",
       }}
     >
-      <label style={{ float: "left", marginLeft: "10px", fontSize: "10px", marginTop: '7px' }}>
+      <label
+        style={{
+          float: "left",
+          marginLeft: "10px",
+          fontSize: "10px",
+          marginTop: "7px",
+        }}
+      >
+        {email ? email : "Email"}
+      </label>
+      <label
+        style={{
+          float: "left",
+          marginLeft: name ? "50px" : "100px",
+          fontSize: "10px",
+          marginTop: "7px",
+        }}
+      >
         {name ? name : "Full Name"}
       </label>
-      <label style={{ marginLeft: "14%", fontSize: "10px" }}>
+      <label style={{ marginLeft: address ? "14%" : "12%", fontSize: "10px" }}>
         {address ? address : "Postal Code"}
       </label>
-      <label style={{ marginLeft: "13%", fontSize: "10px" }}>
+      <label style={{ marginLeft: phone_number? "13%" : "10%", fontSize: "10px" }}>
         {phone_number ? phone_number : "Phone Number"}
       </label>
       {icon ? (
-        <img src={icon} style={{height:'15px', width: '20px', marginLeft: "13%"}} />
+        <img
+          src={icon}
+          style={{ height: "15px", width: "20px", marginLeft: "13%" }}
+        />
       ) : (
-        <label style={{ marginLeft: "13%", fontSize: "10px" }}>Delete</label>
+        <label style={{ marginLeft: "10%", fontSize: "10px" }}>Delete</label>
       )}
     </div>
   );
 };
 
-const TableRowVolunteer = ({ name, phone_number, icon }) => {
+const TableRowVolunteer = ({ email, name, phone_number, icon }) => {
   return (
     <div
       style={{
@@ -40,16 +66,36 @@ const TableRowVolunteer = ({ name, phone_number, icon }) => {
         color: "white",
       }}
     >
-      <label style={{ float: "left", marginLeft: "10px", fontSize: "10px" , marginTop: '7px'  }}>
+      <label
+        style={{
+          float: "left",
+          marginLeft: "10px",
+          fontSize: "10px",
+          marginTop: "7px",
+        }}
+      >
+        {email ? email : `Email`}
+      </label>
+      <label
+        style={{
+          float: "left",
+          marginLeft:name? "60px": "110px",
+          fontSize: "10px",
+          marginTop: "7px",
+        }}
+      >
         {name ? name : "Full Name"}
       </label>
-      <label style={{ marginLeft: "20%", fontSize: "10px" }}>
+      <label style={{ marginLeft: phone_number? "20%" : "18%", fontSize: "10px" }}>
         {phone_number ? phone_number : "Phone Number"}
       </label>
       {icon ? (
-        <img src={icon} style={{height:'15px', width: '20px', marginLeft: "25%"}} />
+        <img
+          src={icon}
+          style={{ height: "15px", width: "20px", marginLeft: "25%" }}
+        />
       ) : (
-        <label style={{ marginLeft: "25%", fontSize: "10px" }}>Delete</label>
+        <label style={{ marginLeft: "22%", fontSize: "10px" }}>Delete</label>
       )}
     </div>
   );
