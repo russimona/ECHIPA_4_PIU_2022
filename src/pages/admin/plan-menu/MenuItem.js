@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import edit from "../../../assets/edit.png";
+import check from "../../../assets/check.png";
 const MenuItem = () => {
   const [menu, setMenu] = useState("");
   const [isEdit, setIsEdit] = useState(true)
@@ -30,7 +31,7 @@ const MenuItem = () => {
       />
 
       <img
-        src={edit}
+        src={isEdit? edit : check}
         style={{
           height: "20px",
           width: "20px",
