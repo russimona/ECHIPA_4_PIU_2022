@@ -14,7 +14,7 @@ const AddPath = () => {
   };
 
   const [departure, setDeparture] = useState("");
-  const [arrival, setArrival] = useState("")
+  const [arrival, setArrival] = useState("");
 
   const [path, setPath] = useState([
     {
@@ -22,10 +22,7 @@ const AddPath = () => {
       departure: "A",
       arrival: "B",
     },
-
-   
   ]);
-
 
   return (
     <>
@@ -51,7 +48,6 @@ const AddPath = () => {
             <label>Phone number : </label>
             <label style={{ textDecoration: "underline" }}>{user.phone}</label>
           </div>
-
           <div
             style={{
               paddingTop: "20px",
@@ -62,7 +58,6 @@ const AddPath = () => {
               {user.postalCode}
             </label>
           </div>
-
           <div
             style={{
               paddingTop: "20px",
@@ -75,7 +70,6 @@ const AddPath = () => {
         {path.map((item) => (
           <RouteItem departure={item.departure} arrival={item.arrival} />
         ))}
-
         {addPath && (
           <div
             style={{
@@ -96,9 +90,10 @@ const AddPath = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 display: "flex",
-                
               }}
-              onChange={(e)=> {setDeparture(e.target.value)}}
+              onChange={(e) => {
+                setDeparture(e.target.value);
+              }}
             ></input>
             <img alt="" src={arrow} style={{ height: "30px" }} />
             <input
@@ -112,22 +107,26 @@ const AddPath = () => {
                 alignItems: "center",
                 display: "flex",
               }}
-              onChange={(e)=> {setArrival(e.target.value)}}
+              onChange={(e) => {
+                setArrival(e.target.value);
+              }}
             ></input>
           </div>
         )}
-
         <Button
           style={{ cursor: "pointer", width: "610px" }}
           className="button-login"
           onClick={() => {
             addPath ? setAddPath(false) : setAddPath(true);
-            
-            (addPath && arrival.length != 0 && departure.length !=0 ) &&  setPath((crrPath)=> [...crrPath, {email : user.email, departure:departure , arrival: arrival}])
-        setArrival("") && setDeparture("")
-          
-        }
-        }
+            addPath &&
+              arrival.length !== 0 &&
+              departure.length !== 0 &&
+              setPath((crrPath) => [
+                ...crrPath,
+                { email: user.email, departure: departure, arrival: arrival },
+              ]);
+            setArrival("") && setDeparture("");
+          }}
         >
           {!addPath ? "Add ROUTE" : "Save Route"}
         </Button>
