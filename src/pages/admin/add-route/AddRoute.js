@@ -2,7 +2,45 @@ import React from "react";
 import { Button } from "reactstrap";
 import NavbarAdmin from "../navbar";
 import edit from "../../../assets/edit.png";
-const AddRoute = ({ blindUsers, setCurrentUser, setAddPath }) => {
+const AddRoute = () => {
+  const blindUsers = [
+    {
+      email: "userb1@gmail.com",
+      name: "userb1",
+      password: "userb1",
+      phone: "0723456789",
+      postalCode: "500410",
+    },
+    {
+      email: "userb2@gmail.com",
+      name: "userb1",
+      password: "userb2",
+      phone: "0723456789",
+      postalCode: "500412",
+    },
+    {
+      email: "userb3@gmail.com",
+      name: "userb1",
+      password: "userb3",
+      phone: "0723456789",
+      postalCode: "500413",
+    },
+    {
+      email: "userb4@gmail.com",
+      name: "userb1",
+      password: "userb4",
+      phone: "0723456789",
+      postalCode: "500414",
+    },
+    {
+      email: "userb5@gmail.com",
+      name: "userb1",
+      password: "userb5",
+      phone: "0723456789",
+      postalCode: "500415",
+    },
+  ];
+
   return (
     <>
       <NavbarAdmin />
@@ -40,7 +78,6 @@ const AddRoute = ({ blindUsers, setCurrentUser, setAddPath }) => {
                   backgroundColor: "#3D3D5C",
                   borderRadius: "10px",
                   padding: "5px",
-                  margin: "10px",
                   color: "white",
                   height: "20px",
                   width: "600px",
@@ -50,6 +87,7 @@ const AddRoute = ({ blindUsers, setCurrentUser, setAddPath }) => {
               >
                 <span>{user.email}</span>
                 <img
+                  alt=""
                   src={edit}
                   style={{
                     height: "20px",
@@ -58,8 +96,7 @@ const AddRoute = ({ blindUsers, setCurrentUser, setAddPath }) => {
                     cursor: "pointer",
                   }}
                   onClick={() => {
-                    setAddPath(true);
-                    setCurrentUser(user);
+                    window.location.href = "/add-path";
                   }}
                 />
               </div>

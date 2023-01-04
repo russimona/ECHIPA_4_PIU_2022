@@ -24,7 +24,14 @@ const Login = () => {
         <input placeholder="email" className="input" />
         <label className="label">Password</label>
         <input placeholder="password" type="password" className="input" />
-        <Button className="button-login">LOGIN</Button>
+        <Button
+          className="button-login"
+          onClick={() => {
+            window.location.href = "/admin-home-page";
+          }}
+        >
+          LOGIN
+        </Button>
       </div>
 
       <div className="child-right">

@@ -1,15 +1,14 @@
 import React from "react";
 import arrow from "../../../../assets/arrow.png";
 const RouteItem = ({ departure, arrival }) => {
-   
   return (
     <div
       style={{
         display: "flex",
         flexDirection: "row",
-        columnGap: "20px",
+        columnGap: "10px",
         justifyContent: "center",
-        padding: "40px",
+        padding: "10px 0px 10px 0px",
       }}
     >
       <div
@@ -19,11 +18,14 @@ const RouteItem = ({ departure, arrival }) => {
           width: "250px",
           height: "34px",
           color: "white",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
         }}
       >
-        departure
+        {departure}
       </div>
-      <img src={arrow} style={{ height: "30px" }} />
+      <img alt="" src={arrow} style={{ height: "30px" }} />
       <div
         style={{
           backgroundColor: "#3D3D5C",
@@ -31,9 +33,12 @@ const RouteItem = ({ departure, arrival }) => {
           width: "250px",
           height: "34px",
           color: "white",
+          justifyContent: "center",
+          alignItems: "center",
+          display: "flex",
         }}
       >
-        arrival
+        {arrival}
       </div>
     </div>
   );

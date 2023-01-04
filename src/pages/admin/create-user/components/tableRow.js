@@ -40,11 +40,14 @@ const TableRowVisionDeficit = ({
       <label style={{ marginLeft: address ? "14%" : "12%", fontSize: "10px" }}>
         {address ? address : "Postal Code"}
       </label>
-      <label style={{ marginLeft: phone_number? "13%" : "10%", fontSize: "10px" }}>
+      <label
+        style={{ marginLeft: phone_number ? "13%" : "10%", fontSize: "10px" }}
+      >
         {phone_number ? phone_number : "Phone Number"}
       </label>
       {icon ? (
         <img
+          alt=""
           src={icon}
           style={{ height: "15px", width: "20px", marginLeft: "13%" }}
         />
@@ -79,18 +82,21 @@ const TableRowVolunteer = ({ email, name, phone_number, icon }) => {
       <label
         style={{
           float: "left",
-          marginLeft:name? "60px": "110px",
+          marginLeft: name ? "60px" : "110px",
           fontSize: "10px",
           marginTop: "7px",
         }}
       >
         {name ? name : "Full Name"}
       </label>
-      <label style={{ marginLeft: phone_number? "20%" : "18%", fontSize: "10px" }}>
+      <label
+        style={{ marginLeft: phone_number ? "20%" : "18%", fontSize: "10px" }}
+      >
         {phone_number ? phone_number : "Phone Number"}
       </label>
       {icon ? (
         <img
+          alt=""
           src={icon}
           style={{ height: "15px", width: "20px", marginLeft: "25%" }}
         />
