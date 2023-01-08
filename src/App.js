@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //components
@@ -20,21 +20,81 @@ import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.j
 import AddPath from "./pages/admin/add-route/AddPath";
 
 export default function App() {
- 
+  const [volunteers, setVolunteers] = useState([
+    {
+      email: "userv1@gmail.com",
+      name: "userv1",
+      password: "userv1",
+      phone: "0723456789",
+    },
+  ]);
+
+  const [blindUsers, setBlindUsers] = useState([
+    {
+      email: "userb1@gmail.com",
+      name: "userb1",
+      password: "userb1",
+      phone: "0723456789",
+      postalCode: "500410",
+    },
+  ]);
+
+  const [path, setPath] = useState([
+    {
+      emailUser: "userb1@gmail.com",
+      departure: "A",
+      arrival: "B",
+    },
+  ]);
+
+  const [selectedUser, setSelectedUser] = useState(null);
+
   return (
     <Router>
       <div>
         <Routes>
           <Route exact path="/" element={<Login />} />
           <Route exact path="/admin-home-page" element={<HomeAdmin />} />
-          <Route exact path="/admin-create-user" element={<AddUser />} />
-          <Route exact path="/admin-add-route" element={<AddRoute />} />
-        
-          <Route exact path="/add-path" element={<AddPath />} />
+          <Route
+            exact
+            path="/admin-create-user"
+            element={
+              <AddUser volunteers={volunteers} blindUsers={blindUsers} />
+            }
+          />
+          <Route
+            exact
+            path="/admin-add-route"
+            element={
+              <AddRoute
+                blindUsers={blindUsers}
+                setSelectedUser={setSelectedUser}
+              />
+            }
+          />
+
+          <Route
+            exact
+            path="/add-path"
+            element={
+              <AddPath
+                path={path}
+                setPath={setPath}
+                selectedUser={selectedUser}
+              />
+            }
+          />
           <Route exact path="/admin-plan-daily-menu" element={<PlanMenu />} />
-          <Route exact path="/add-volunteer" element={<AddVolunteer />} />
-          <Route exact path="/add-blind-person" element={<AddBlindPerson />} />
-          {/* <Route exact path="/" element={<Login />} /> */}
+          <Route
+            exact
+            path="/add-volunteer"
+            element={<AddVolunteer setVolunteers={setVolunteers} />}
+          />
+          <Route
+            exact
+            path="/add-blind-person"
+            element={<AddBlindPerson setBlindUsers={setBlindUsers} />}
+          />
           <Route exact path="/blindMenu" element={<MainMenu />} />
           <Route exact path="/camera" element={<CameraPage />} />
           <Route exact path="/confirm" element={<ConfirmationPage />} />
@@ -60,5 +120,3 @@ export default function App() {
     </Router>
   );
 }
-
-

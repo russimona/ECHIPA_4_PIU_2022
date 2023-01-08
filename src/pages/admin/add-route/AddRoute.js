@@ -2,45 +2,8 @@ import React from "react";
 import { Button } from "reactstrap";
 import NavbarAdmin from "../navbar";
 import edit from "../../../assets/edit.png";
-const AddRoute = () => {
-  const blindUsers = [
-    {
-      email: "userb1@gmail.com",
-      name: "userb1",
-      password: "userb1",
-      phone: "0723456789",
-      postalCode: "500410",
-    },
-    {
-      email: "userb2@gmail.com",
-      name: "userb1",
-      password: "userb2",
-      phone: "0723456789",
-      postalCode: "500412",
-    },
-    {
-      email: "userb3@gmail.com",
-      name: "userb1",
-      password: "userb3",
-      phone: "0723456789",
-      postalCode: "500413",
-    },
-    {
-      email: "userb4@gmail.com",
-      name: "userb1",
-      password: "userb4",
-      phone: "0723456789",
-      postalCode: "500414",
-    },
-    {
-      email: "userb5@gmail.com",
-      name: "userb1",
-      password: "userb5",
-      phone: "0723456789",
-      postalCode: "500415",
-    },
-  ];
-
+import { Link } from "react-router-dom";
+const AddRoute = ({ blindUsers, setSelectedUser }) => {
   return (
     <>
       <NavbarAdmin />
@@ -74,6 +37,7 @@ const AddRoute = () => {
           {blindUsers.map((user) => {
             return (
               <div
+                key={Math.random()}
                 style={{
                   backgroundColor: "#3D3D5C",
                   borderRadius: "10px",
@@ -85,20 +49,26 @@ const AddRoute = () => {
                   fontSize: "12px",
                 }}
               >
-                <span>{user.email}</span>
-                <img
-                  alt=""
-                  src={edit}
-                  style={{
-                    height: "20px",
-                    width: "20px",
-                    float: "right",
-                    cursor: "pointer",
-                  }}
+                <Link
+                  to={"/add-path"}
+                  style={{ color: "#ffffff" }}
                   onClick={() => {
-                    window.location.href = "/add-path";
+                    setSelectedUser(user);
                   }}
-                />
+                >
+                  <span>{user.email}</span>
+                  <img
+                    key={user}
+                    alt=""
+                    src={edit}
+                    style={{
+                      height: "20px",
+                      width: "20px",
+                      float: "right",
+                      cursor: "pointer",
+                    }}
+                  />
+                </Link>
               </div>
             );
           })}
@@ -106,11 +76,10 @@ const AddRoute = () => {
           <Button
             style={{ cursor: "pointer", width: "610px" }}
             className="button-login"
-            onClick={() => {
-              window.location.href = "/add-blind-person";
-            }}
           >
-            ADD NEW USER
+            <Link to={"/add-blind-person"} style={{ color: "#ffffff" }}>
+              ADD NEW USER
+            </Link>
           </Button>
         </div>
       </div>

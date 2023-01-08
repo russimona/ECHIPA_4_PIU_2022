@@ -3,26 +3,11 @@ import { Button } from "reactstrap";
 import NavbarAdmin from "../navbar";
 import RouteItem from "./components/RouteItem";
 import arrow from "../../../assets/arrow.png";
-const AddPath = () => {
+const AddPath = ({ path, setPath, selectedUser }) => {
   const [addPath, setAddPath] = useState(false);
-  const user = {
-    email: "userb1@gmail.com",
-    name: "userb1",
-    password: "userb1",
-    phone: "0723456789",
-    postalCode: "500410",
-  };
 
   const [departure, setDeparture] = useState("");
   const [arrival, setArrival] = useState("");
-
-  const [path, setPath] = useState([
-    {
-      emailUser: "userb1@gmail.com",
-      departure: "A",
-      arrival: "B",
-    },
-  ]);
 
   return (
     <>
@@ -46,7 +31,9 @@ const AddPath = () => {
             }}
           >
             <label>Phone number : </label>
-            <label style={{ textDecoration: "underline" }}>{user.phone}</label>
+            <label style={{ textDecoration: "underline" }}>
+              {selectedUser.phone}
+            </label>
           </div>
           <div
             style={{
@@ -55,7 +42,7 @@ const AddPath = () => {
           >
             <label>Address : </label>
             <label style={{ textDecoration: "underline" }}>
-              {user.postalCode}
+              {selectedUser.postalCode}
             </label>
           </div>
           <div
@@ -64,12 +51,23 @@ const AddPath = () => {
             }}
           >
             <label>Name : </label>
-            <label style={{ textDecoration: "underline" }}> {user.name}</label>
+            <label style={{ textDecoration: "underline" }}>
+              {" "}
+              {selectedUser.name}
+            </label>
           </div>
         </div>
-        {path.map((item) => (
-          <RouteItem departure={item.departure} arrival={item.arrival} />
-        ))}
+        {path
+          .filter((item) => {
+            if (item.email === selectedUser.email) return item;
+          })
+          .map((item) => (
+            <RouteItem
+              key={Math.random()}
+              departure={item.departure}
+              arrival={item.arrival}
+            />
+          ))}
         {addPath && (
           <div
             style={{
@@ -123,7 +121,11 @@ const AddPath = () => {
               departure.length !== 0 &&
               setPath((crrPath) => [
                 ...crrPath,
-                { email: user.email, departure: departure, arrival: arrival },
+                {
+                  email: selectedUser.email,
+                  departure: departure,
+                  arrival: arrival,
+                },
               ]);
             setArrival("") && setDeparture("");
           }}

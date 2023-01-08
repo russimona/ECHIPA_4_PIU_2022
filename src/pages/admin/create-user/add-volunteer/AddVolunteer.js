@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import NavbarAdmin from "../../navbar";
 import { Button } from "reactstrap";
-const AddVolunteer = () => {
+import { Link } from "react-router-dom";
+
+const AddVolunteer = ({ setVolunteers }) => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [pasword, setPassword] = useState("");
+
+  const addVolunteerHandler = () => {
+    setVolunteers((prevList) => [
+      ...prevList,
+      {
+        email: email,
+        name: name,
+        password: pasword,
+        phone: phoneNumber,
+      },
+    ]);
+  };
   return (
     <>
       <NavbarAdmin />
@@ -37,6 +55,9 @@ const AddVolunteer = () => {
           <div>
             <label style={{ margin: "auto", marginLeft: "320px" }}>Email</label>
             <input
+              onChange={(event) => {
+                setEmail(event.target.value);
+              }}
               placeholder="email"
               style={{
                 display: "flex",
@@ -54,6 +75,9 @@ const AddVolunteer = () => {
           <div>
             <label style={{ margin: "auto", marginLeft: "320px" }}>Name</label>
             <input
+              onChange={(event) => {
+                setName(event.target.value);
+              }}
               placeholder="name"
               style={{
                 display: "flex",
@@ -70,6 +94,9 @@ const AddVolunteer = () => {
           <div>
             <label style={{ margin: "auto", marginLeft: "320px" }}>Phone</label>
             <input
+              onChange={(event) => {
+                setPhoneNumber(event.target.value);
+              }}
               placeholder="phone number"
               style={{
                 display: "flex",
@@ -89,6 +116,9 @@ const AddVolunteer = () => {
               Password
             </label>
             <input
+              onChange={(event) => {
+                setPassword(event.target.value);
+              }}
               placeholder="password"
               style={{
                 display: "flex",
@@ -104,13 +134,13 @@ const AddVolunteer = () => {
           </div>
         </div>
         <Button
-        style={{cursor: "pointer"}}
+          style={{ cursor: "pointer" }}
           className="button-login"
-          onClick={() => {
-            window.location.href = "/admin-create-user";
-          }}
+          onClick={addVolunteerHandler}
         >
-          ADD BLIND USER
+          <Link to={"/admin-create-user"} style={{ color: "#ffffff" }}>
+            ADD VOLUNTEER
+          </Link>
         </Button>
       </div>
     </>

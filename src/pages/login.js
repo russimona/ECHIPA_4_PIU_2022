@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "reactstrap";
-
+import { Link } from "react-router-dom";
 //assets
 import eye from "../assets/violet-eye.png";
 //others
@@ -14,7 +14,7 @@ const Login = () => {
           style={{
             justifyContent: "center",
             display: "flex",
-            paddingTop: "30",
+            paddingTop: "30px",
             marginBottom: "80px",
           }}
         >
@@ -26,11 +26,8 @@ const Login = () => {
         <input placeholder="password" type="password" className="input" />
         <Button
           className="button-login"
-          onClick={() => {
-            window.location.href = "/admin-home-page";
-          }}
         >
-          LOGIN
+           <Link to={"/admin-home-page"} style={{ color: "#ffffff" }}> Login </Link>
         </Button>
       </div>
 
