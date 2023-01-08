@@ -10,6 +10,15 @@ const AddBlindPerson = ({ setBlindUsers }) => {
   const [pasword, setPassword] = useState("");
 
   const addBlindUserHandler = () => {
+    if (
+      email.length === 0 ||
+      name.length === 0 ||
+      phoneNumber.length === 0 ||
+      address.length === 0 ||
+      pasword.length === 0
+    ) {
+      alert("Please enter valid user inputs");
+    }
     setBlindUsers((prevList) => [
       ...prevList,
       {
@@ -162,8 +171,7 @@ const AddBlindPerson = ({ setBlindUsers }) => {
           onClick={addBlindUserHandler}
         >
           <Link to={"/admin-create-user"} style={{ color: "#ffffff" }}>
-            {" "}
-            ADD BLIND USER{" "}
+            ADD BLIND USER
           </Link>
         </Button>
       </div>

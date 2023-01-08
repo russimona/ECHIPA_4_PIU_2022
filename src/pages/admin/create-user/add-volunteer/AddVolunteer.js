@@ -10,6 +10,14 @@ const AddVolunteer = ({ setVolunteers }) => {
   const [pasword, setPassword] = useState("");
 
   const addVolunteerHandler = () => {
+    if (
+      email.length === 0 ||
+      name.length === 0 ||
+      phoneNumber.length === 0 ||
+      pasword.length === 0
+    ) {
+      alert("Please enter valid user inputs");
+    }
     setVolunteers((prevList) => [
       ...prevList,
       {

@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button } from "reactstrap";
-import { Link } from "react-router-dom";
 //assets
 import eye from "../assets/violet-eye.png";
 //others
 import "./login.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [enable, setEnable] = useState(false);
+
+  const onLoginHandler = () => {
+    if (email === "admin@admin.com" && password === "admin") {
+      window.location.href = "/admin-home-page";
+    } else {
+      alert("Please enter a correct username & password ");
+    }
+  };
+
   return (
     <div>
       <div className="child-left">
@@ -21,13 +32,24 @@ const Login = () => {
           Login to Your Account
         </h2>
         <label className="label">Email</label>
-        <input placeholder="email" className="input" />
+        <input
+          placeholder="email"
+          className="input"
+          onChange={(event) => {
+            setEmail(event.target.value);
+          }}
+        />
         <label className="label">Password</label>
-        <input placeholder="password" type="password" className="input" />
-        <Button
-          className="button-login"
-        >
-           <Link to={"/admin-home-page"} style={{ color: "#ffffff" }}> Login </Link>
+        <input
+          placeholder="password"
+          type="password"
+          className="input"
+          onChange={(event) => {
+            setPassword(event.target.value);
+          }}
+        />
+        <Button className="button-login" onClick={onLoginHandler}>
+          Login
         </Button>
       </div>
 
