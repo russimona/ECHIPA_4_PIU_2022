@@ -14,7 +14,7 @@ import Login from "./pages/login";
 import MainMenu from "./blind/presentational/principal_menu.js";
 import CameraPage from "./blind/presentational/camera.js";
 import ConfirmationPage from "./blind/presentational/confirmation";
-import EmergencyPage from "./blind/presentational/emergency";
+import EmergencyInputPage from "./blind/presentational/emergency";
 import AddBlindPerson from "./pages/admin/create-user/add-blind-person/AddBlindPerson.js";
 import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.js";
 import AddPath from "./pages/admin/add-route/AddPath";
@@ -99,14 +99,13 @@ export default function App() {
             path="/add-blind-person"
             element={<AddBlindPerson setBlindUsers={setBlindUsers} />}
           />
-          <Route exact path="/blindMenu" element={<MainMenu />} />
+         
           <Route exact path="/camera" element={<CameraPage />} />
           <Route exact path="/confirm" element={<ConfirmationPage />} />
-          <Route exact path="/emergency" element={<EmergencyPage />} />
           <Route exact path="/blindMenu" element={<BlindMenu />} />
           <Route exact path="/camera/:action" element={<CameraPage />} />
           <Route exact path="/confirm/:option" element={<ConfirmationPage />} />
-         
+          <Route exact path="/emergency" element={<EmergencyInputPage />} />
           <Route exact path="/travel" element={<RoutesdMenuLogic />} />
           <Route exact path="/orderfood" element={<OrderFoodPage />} />
           <Route
