@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //components
+import AddBlindPerson from "./pages/admin/create-user/add-blind-person/AddBlindPerson.js";
+import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.js";
 import AddRoute from "./pages/admin/add-route/AddRoute";
 import AddUser from "./pages/admin/create-user/AddUser";
 import HomeAdmin from "./pages/admin/home/home";
@@ -11,17 +13,14 @@ import Notifications from "./pages/volunteer/notification/Notifications";
 import Reports from "./pages/volunteer/report/Reports";
 import ReportForm from "./pages/volunteer/report/ReportForm";
 import Login from "./pages/login";
-import MainMenu from "./blind/presentational/principal_menu.js";
-import CameraPage from "./blind/presentational/camera.js";
-import ConfirmationPage from "./blind/presentational/confirmation";
-import EmergencyInputPage from "./blind/presentational/emergency";
-import AddBlindPerson from "./pages/admin/create-user/add-blind-person/AddBlindPerson.js";
-import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.js";
+
+import CameraLogic from "./blind/logic/CameraLogic.js";
+import ConfirmationPage from "./blind/logic/CofirmationLogic.js";
 import AddPath from "./pages/admin/add-route/AddPath";
 import BlindMenu from "./blind/logic/MenuLogic";
 import RoutesdMenuLogic from "./blind/logic/RoutesLogic";
-import OrderFoodPage from "./blind/logic/OrderFoodLogic"
-
+import OrderFoodPage from "./blind/logic/OrderFoodLogic";
+import EmergencyInputPage from "./blind/logic/EmergencyLogic";
 
 export default function App() {
   const [volunteers, setVolunteers] = useState([
@@ -99,11 +98,9 @@ export default function App() {
             path="/add-blind-person"
             element={<AddBlindPerson setBlindUsers={setBlindUsers} />}
           />
-         
-          <Route exact path="/camera" element={<CameraPage />} />
-          <Route exact path="/confirm" element={<ConfirmationPage />} />
+
           <Route exact path="/blindMenu" element={<BlindMenu />} />
-          <Route exact path="/camera/:action" element={<CameraPage />} />
+          <Route exact path="/camera/:action" element={<CameraLogic />} />
           <Route exact path="/confirm/:option" element={<ConfirmationPage />} />
           <Route exact path="/emergency" element={<EmergencyInputPage />} />
           <Route exact path="/travel" element={<RoutesdMenuLogic />} />
