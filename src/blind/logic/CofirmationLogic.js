@@ -127,7 +127,8 @@ function CofirmationMenu() {
                     window.location.assign("/camera/detectBanknote")
                 }
                 if (option === "medium" || option === "low" || option === "high") {
-                    eventBus.dispatch("emergencyNotification", { severity: option , user:"Jane Doe" });
+                    eventBus.dispatch("emergencyNotification", { severity: option, user: "Jane Doe" });
+                    window.location.assign("/blindMenu")
                 }
                 if (option === "3") {
                     window.location.assign("/orderfood")
