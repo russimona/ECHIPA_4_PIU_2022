@@ -15,6 +15,8 @@ const Reports = () => {
     <div
       style={{
         backgroundColor: "#B3B3CC",
+        width: "640vw",
+        height: "640vh"
       }}
     >
       <NavbarVolunteer />

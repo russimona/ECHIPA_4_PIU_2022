@@ -1,7 +1,7 @@
 .topBar {
   background-color: #666699;
-  height: auto;
   display: flex;
+  height: 60px;
 }
 
 .topBar .icon {
@@ -64,7 +64,7 @@
 hr.underline {
   display: block;
   width: 320px;
-  margin: 0;
-  margin-left: 20px;
+  margin: 0 0 0 20px;
   border: 1px solid #a3a3c2;
 }
+

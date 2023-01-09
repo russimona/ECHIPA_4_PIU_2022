@@ -22,9 +22,9 @@ import AddPath from "./pages/admin/add-route/AddPath";
 export default function App() {
   const [volunteers, setVolunteers] = useState([
     {
-      email: "userv1@gmail.com",
+      email: "v",
       name: "userv1",
-      password: "userv1",
+      password: "v",
       phone: "0723456789",
     },
   ]);

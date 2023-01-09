@@ -24,12 +24,16 @@ const Notifications = () => {
     <div
       style={{
         backgroundColor: "#B3B3CC",
+        width: "640vw",
+        height: "640vh"
       }}
     >
       <NavbarVolunteer />
       <div
         style={{
-          height: "100vh",
+          backgroundColor: "#B3B3CC",
+          height: "100%",
+          width: "100%"
         }}
       >
         {notifications.map((item) => (

@@ -1,7 +1,6 @@
 .buttonsContainer {
-  padding: 80px;
-  padding-top: 190px;
-  height: 100vh;
+  padding: 190px 80px 10px;
+  display: grid;
 }
 
 .buttonsContainer .myButton {

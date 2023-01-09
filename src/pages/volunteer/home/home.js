@@ -1,20 +1,24 @@
 //components
 import NavbarVolunteer from "../navbar";
-import { Fragment } from "react";
 
 const HomeVolunteer = () => {
   return (
-    <Fragment>
+    <div
+        style={{
+            width: "640vw",
+            height: "640vh"
+        }}>
       <NavbarVolunteer />
       <div
         style={{
           backgroundColor: "#B3B3CC",
-          height: "100vh",
+            height: "100%",
+            width: "100%"
         }}
       >
         Homepage
       </div>
-    </Fragment>
+    </div>
   );
 };
 
