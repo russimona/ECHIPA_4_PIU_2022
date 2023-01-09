@@ -3,8 +3,10 @@
     "",
     "\\src",
     "\\src\\blind",
-    "\\src\\blind\\presentational"
+    "\\src\\blind\\logic",
+    "\\src\\blind\\presentational",
+    "\\src\\blind\\sounds"
   ],
-  "SelectedNode": "\\src\\blind\\presentational\\camera.js",
+  "SelectedNode": "\\src\\blind\\logic\\CameraLogic.js",
   "PreviewInSolutionExplorer": false
 }

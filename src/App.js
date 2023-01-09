@@ -18,6 +18,10 @@ import EmergencyPage from "./blind/presentational/emergency";
 import AddBlindPerson from "./pages/admin/create-user/add-blind-person/AddBlindPerson.js";
 import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.js";
 import AddPath from "./pages/admin/add-route/AddPath";
+import BlindMenu from "./blind/logic/MenuLogic";
+import RoutesdMenuLogic from "./blind/logic/RoutesLogic";
+import OrderFoodPage from "./blind/logic/OrderFoodLogic"
+
 
 export default function App() {
   const [volunteers, setVolunteers] = useState([
@@ -99,6 +103,12 @@ export default function App() {
           <Route exact path="/camera" element={<CameraPage />} />
           <Route exact path="/confirm" element={<ConfirmationPage />} />
           <Route exact path="/emergency" element={<EmergencyPage />} />
+          <Route exact path="/blindMenu" element={<BlindMenu />} />
+          <Route exact path="/camera/:action" element={<CameraPage />} />
+          <Route exact path="/confirm/:option" element={<ConfirmationPage />} />
+         
+          <Route exact path="/travel" element={<RoutesdMenuLogic />} />
+          <Route exact path="/orderfood" element={<OrderFoodPage />} />
           <Route
             exact
             path="/volunteer-home-page"
