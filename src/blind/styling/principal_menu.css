@@ -29,7 +29,7 @@
 }
 
 .b1 {
-    background-color: #F3911E
+    background-color: #F3911E;
 }
 
 .b2 {
@@ -84,5 +84,9 @@
     margin-bottom: 20px;
     margin-right: 2.25%;
     font-size: 300%;
+}
+
+.audio{
+    visibility:visible;
 }
 

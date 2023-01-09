@@ -1,0 +1,69 @@
+.routes_content {
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+}
+.title-section_routes {
+    background-color: white;
+    padding-left: 40vw;
+}
+
+.title_routes {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: black;
+    font-weight: bold;
+    font-size: 2vw;
+}
+
+.b1r {
+    background-color: #CC99FF;
+}
+
+.b2r {
+    background-color: #CC99FF
+}
+
+.b3r {
+    background-color: #CC99FF
+}
+
+.b4r {
+    background-color: #921A82
+}
+
+.b5r {
+    background-color: #921A82
+}
+
+.b6r {
+    background-color: #921A82
+}
+
+.b7r {
+    background-color: #8545BC
+}
+
+.b8r {
+    background-color: #8545BC
+}
+
+.b9r {
+    background-color: #8545BC
+}
+
+.b0r {
+    background-color: #FE6E93
+}
+
+.bresr {
+    background-color: #FFB6C1
+}
+
+.bemr {
+    background-color: #006763
+}
+
+.br{
+    border-color:transparent
+}

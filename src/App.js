@@ -11,10 +11,12 @@ import Notifications from "./pages/volunteer/notification/Notifications";
 import Reports from "./pages/volunteer/report/Reports";
 import ReportForm from "./pages/volunteer/report/ReportForm";
 import Login from "./pages/login";
-import MainMenu from "./blind/presentational/principal_menu.js";
-import CameraPage from "./blind/presentational/camera.js";
-import ConfirmationPage from "./blind/presentational/confirmation";
-import EmergencyPage from "./blind/presentational/emergency";
+import BlindMenu from "./blind/logic/MenuLogic";
+import CameraPage from "./blind/logic/CameraLogic";
+import ConfirmationPage from "./blind/logic/CofirmationLogic";
+import EmergencyInputPage from "./blind/logic/EmergencyLogic";
+import RoutesdMenuLogic from "./blind/logic/RoutesLogic";
+import OrderFoodPage from "./blind/logic/OrderFoodLogic"
 
 export default function App() {
   return (
@@ -27,10 +29,12 @@ export default function App() {
           <Route exact path="/admin-add-route" element={<AddRoute />} />
           <Route exact path="/admin-plan-daily-menu" element={<PlanMenu />} />
           {/* <Route exact path="/" element={<Login />} /> */}
-          <Route exact path="/blindMenu" element={<MainMenu />} />
-          <Route exact path="/camera" element={<CameraPage />} />
-          <Route exact path="/confirm" element={<ConfirmationPage />} />
-          <Route exact path="/emergency" element={<EmergencyPage />} />
+          <Route exact path="/blindMenu" element={<BlindMenu />} />
+          <Route exact path="/camera/:action" element={<CameraPage />} />
+          <Route exact path="/confirm/:option" element={<ConfirmationPage />} />
+          <Route exact path="/emergency" element={<EmergencyInputPage />} />
+          <Route exact path="/travel" element={<RoutesdMenuLogic />} />
+          <Route exact path="/orderfood" element={<OrderFoodPage />} />
           <Route
             exact
             path="/volunteer-home-page"

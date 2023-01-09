@@ -1,0 +1,19 @@
+.camera{
+    width:100vw;
+    height:100vh;
+    justify-content:center;
+    align-items:center;
+}
+.image-upload > input {
+    display: none;
+}
+
+.image-upload {
+    width: 100vh;
+    height: 100vh;
+}
+
+.camera_image{
+   width:100vw;
+   height:100vh;
+}
