@@ -5,17 +5,21 @@ import { HiOutlineDocumentReport } from "react-icons/hi";
 import { IoIosNotifications } from "react-icons/io";
 import { BsFillPeopleFill } from "react-icons/bs";
 import eye from "../../assets/violet-eye.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { FaSignOutAlt } from "react-icons/fa";
 
 const NavbarVolunteer = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
   };
 
-  const logoutHandler = () => {};
+  const logoutHandler = () => {
+    navigate("/");
+  };
+
   return (
     <Fragment>
       <div className={classes.topBar}>
@@ -41,7 +45,7 @@ const NavbarVolunteer = () => {
             <div class={classes.menuItem}>NOTIFICATIONS</div>
           </NavLink>
           <hr class={classes.underline} />
-          <NavLink className={classes.navLink}>
+          <NavLink className={classes.navLink} to="/volunteer-all-profiles">
             <BsFillPeopleFill className={classes.icon} size="27px" />
             <div class={classes.menuItem}>PROFILES</div>
           </NavLink>

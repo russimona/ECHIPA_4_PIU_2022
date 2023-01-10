@@ -9,10 +9,10 @@ const Profile = (props) => {
         <div>Close</div>
       </div>
       <div className={classes.fieldsContainer}>
-        <div className={classes.field}> Info1:&emsp; {props.value.info1}</div>
-        <div className={classes.field}> Info2:&emsp; {props.value.info2}</div>
-        <div className={classes.field}> Info3:&emsp; {props.value.info3}</div>
-        <div className={classes.field}> Info4:&emsp; {props.value.info4}</div>
+        <div className={classes.field}> Address:&emsp; {props.value.address}</div>
+        <div className={classes.field}> Email:&emsp; {props.value.email}</div>
+        <div className={classes.field}> Phone:&emsp; {props.value.phone}</div>
+        <div className={classes.field}> Vision:&emsp; {props.value.vision}</div>
       </div>
     </div>
   );

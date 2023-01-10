@@ -1,0 +1,18 @@
+.reportContainer {
+    margin-top: 10px;
+    background-color: #B3B3CC ;
+    color: #3d3d5c;
+    width: 360px;
+    display: block;
+    flex-wrap: wrap;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left:10px;
+
+}
+
+.iconOn {
+    color: #976dd0;
+    padding-top: 5px;
+    padding-right: 5px;
+}

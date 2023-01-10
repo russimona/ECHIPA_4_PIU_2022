@@ -18,6 +18,9 @@ import EmergencyPage from "./blind/presentational/emergency";
 import AddBlindPerson from "./pages/admin/create-user/add-blind-person/AddBlindPerson.js";
 import AddVolunteer from "./pages/admin/create-user/add-volunteer/AddVolunteer.js";
 import AddPath from "./pages/admin/add-route/AddPath";
+import AllReports from "./pages/volunteer/report/AllReports";
+import AllProfiles from "./pages/volunteer/profile/AllProfiles";
+import Details from "./pages/volunteer/profile/Details";
 
 export default function App() {
   const [volunteers, setVolunteers] = useState([
@@ -114,6 +117,21 @@ export default function App() {
             exact
             path="/volunteer-create-report"
             element={<ReportForm />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-reports"
+              element={<AllReports />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-profiles"
+              element={<AllProfiles />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-profiles/:email"
+              element={<Details />}
           />
         </Routes>
       </div>

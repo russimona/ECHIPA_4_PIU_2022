@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 const Reports = () => {
   const navigate = useNavigate();
 
-  const handleOtherReports = () => {};
+  const handleOtherReports = () => {
+    navigate("/volunteer-all-reports");
+  };
 
   const handleMakeNewReport = () => {
     navigate("/volunteer-create-report");

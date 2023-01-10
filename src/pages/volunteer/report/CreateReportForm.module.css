@@ -1,0 +1,49 @@
+.myButton {
+    width: 150px;
+    color: white;
+    background-color: #666699;
+    border: none;
+    margin-bottom: 20px;
+    height: 40px;
+    font-style: bold;
+    margin-left: 90px;
+}
+
+.reportsContainer {
+    margin-top: 10px;
+    background-color: white;
+    color: #3d3d5c;
+    width: 100%;
+}
+
+.closeSection {
+    padding: 10px 10px 10px 265px;
+    display: inline-flex;
+    font-size: 17px;
+}
+
+.reportsContainer input {
+
+    margin-top: 10px;
+    width: 145px;
+    font-size: 17px;
+    color: #47476B;
+    margin-bottom: 20px;
+    margin-left: 90px;
+}
+.reportsContainer textarea {
+    margin-top: 4px;
+    width: 310px;
+    font-size: 17px;
+    color: #47476B;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+
+.reportsContainer label{
+    color: #47476B;
+    margin-left: 90px;
+    margin-bottom: 4px;
+}

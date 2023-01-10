@@ -1,0 +1,12 @@
+.reportsContainer {
+    margin-top: 10px;
+    background-color: white;
+    color: #3d3d5c;
+    width: 100%;
+}
+
+.closeSection {
+    padding: 10px 10px 10px 265px;
+    display: inline-flex;
+    font-size: 17px;
+}
