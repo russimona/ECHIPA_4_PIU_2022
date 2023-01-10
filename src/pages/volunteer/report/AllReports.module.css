@@ -35,3 +35,10 @@
     height: 40px;
     font-style: bold;
 }
+
+.reportsContainer {
+    margin-top: 10px;
+    background-color: white;
+    color: #3d3d5c;
+    width: 100%;
+}

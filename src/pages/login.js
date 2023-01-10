@@ -10,13 +10,16 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [enable, setEnable] = useState(false);
 
-  const onLoginHandler = () => {
-    if (email === "admin@admin.com" && password === "admin") {
-      window.location.href = "/admin-home-page";
-    } else {
-      alert("Please enter a correct username & password ");
-    }
-  };
+    const onLoginHandler = () => {
+        if (email === "admin@admin.com" && password === "admin") {
+            window.location.href = "/admin-home-page";
+        } else if (email === "v" && password === "v") {
+            window.location.href = "/volunteer-home-page";
+            alert("Please change viewport to mobile ");
+        } else {
+            alert("Please enter a correct username & password ");
+        }
+    };
 
   return (
     <div>

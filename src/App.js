@@ -21,13 +21,16 @@ import BlindMenu from "./blind/logic/MenuLogic";
 import RoutesdMenuLogic from "./blind/logic/RoutesLogic";
 import OrderFoodPage from "./blind/logic/OrderFoodLogic";
 import EmergencyInputPage from "./blind/logic/EmergencyLogic";
+import AllReports from "./pages/volunteer/report/AllReports";
+import AllProfiles from "./pages/volunteer/profile/AllProfiles";
+import Details from "./pages/volunteer/profile/Details";
 
 export default function App() {
   const [volunteers, setVolunteers] = useState([
     {
-      email: "userv1@gmail.com",
+      email: "v",
       name: "userv1",
-      password: "userv1",
+      password: "v",
       phone: "0723456789",
     },
   ]);
@@ -120,6 +123,21 @@ export default function App() {
             exact
             path="/volunteer-create-report"
             element={<ReportForm />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-reports"
+              element={<AllReports />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-profiles"
+              element={<AllProfiles />}
+          />
+          <Route
+              exact
+              path="/volunteer-all-profiles/:email"
+              element={<Details />}
           />
         </Routes>
       </div>

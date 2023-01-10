@@ -5,7 +5,9 @@ import { useNavigate } from "react-router-dom";
 const Reports = () => {
   const navigate = useNavigate();
 
-  const handleOtherReports = () => {};
+  const handleOtherReports = () => {
+    navigate("/volunteer-all-reports");
+  };
 
   const handleMakeNewReport = () => {
     navigate("/volunteer-create-report");
@@ -15,6 +17,8 @@ const Reports = () => {
     <div
       style={{
         backgroundColor: "#B3B3CC",
+        width: "640vw",
+        height: "640vh"
       }}
     >
       <NavbarVolunteer />
